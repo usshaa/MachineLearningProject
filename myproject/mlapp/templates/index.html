@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2 class="mt-5 mb-3 text-center animate__animated animate__fadeInDown">Make a Prediction</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form method="post" class="border p-4 rounded bg-success">
+        {% csrf_token %}
+        <div class="form-group row">
+          <div class="col-sm-6">
+            {{ form.product.label_tag }}
+            {{ form.product }}
+          </div>
+          <div class="col-sm-6">
+            {{ form.quantity.label_tag }}
+            {{ form.quantity }}
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            {{ form.price.label_tag }}
+            {{ form.price }}
+          </div>
+          <div class="col-sm-6">
+            {{ form.month.label_tag }}
+            {{ form.month }}
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            {{ form.city.label_tag }}
+            {{ form.city }}
+          </div>
+          <div class="col-sm-6">
+            {{ form.hour.label_tag }}
+            {{ form.hour }}
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary mt-3">Predict Sales</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

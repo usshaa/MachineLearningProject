@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Prediction Result</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Input</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product</td>
+                            <td>{{ product }}</td>
+                        </tr>
+                        <tr>
+                            <td>Quantity</td>
+                            <td>{{ quantity }}</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td>{{ price }}</td>
+                        </tr>
+                        <tr>
+                            <td>Month</td>
+                            <td>{{ month }}</td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>{{ city }}</td>
+                        </tr>
+                        <tr>
+                            <td>Hour</td>
+                            <td>{{ hour }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-dark bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-light">Prediction</h5>
+                        <p class="card-text text-success">{{ prediction }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
