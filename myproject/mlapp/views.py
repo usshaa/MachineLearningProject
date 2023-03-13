@@ -17,7 +17,7 @@ def createmodel(request):
     X = pd.get_dummies(X, columns=['Product', 'City'])
     # Print the column names and their values
     print(X.columns)
-    print(X.head())
+    print(X.head(20))
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     # Save the column names
