@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from .forms import PredictionForm
 import pandas as pd
-from sklearn.tree import DecisionTreeRegressor
+from sklearn.tree import DecisionTreeRegressor,plot_tree
 from sklearn.model_selection import train_test_split
 import pickle
-
+import matplotlib.pyplot as plt
 
 def createmodel(request):
     # Read csv
@@ -25,6 +25,11 @@ def createmodel(request):
         pickle.dump(X.columns, f)
     model = DecisionTreeRegressor(random_state=42)
     model.fit(X_train, y_train)
+    # Visualize the decision tree
+    fig, ax = plt.subplots(figsize=(15, 10))
+    plot_tree(model, filled=True, feature_names=X.columns,max_depth=3,fontsize = 14,label = "all",rounded=True, ax=ax)
+    plt.savefig('static/image/decision_tree.png',dpi=300)
+
     # Predicting the Test set results
     predictions = model.predict(X_test)
     # save the model to disk

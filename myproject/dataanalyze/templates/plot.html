@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container-fluid">
+    <h2 class="mt-2 mb-3 text-center text-light">Data Visualization</h2>
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <div class="card-header">
+            <h3 class="card-title">Month Number Vs Sales in millions USD</h3>
+          </div>
+          <div class="card-body">
+            <img src="{% static 'image/plot1.png' %}" width="100%" height="auto">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <div class="card-header">
+            <h3 class="card-title">City Name Vs Sales in millions USD</h3>
+          </div>
+          <div class="card-body">
+            <img src="{% static 'image/plot2.png' %}" width="100%" height="auto">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <div class="card-header">
+            <h3 class="card-title">Hour Vs Number of Orders</h3>
+          </div>
+          <div class="card-body">
+            <img src="{% static 'image/plot3.png' %}" width="100%" height="auto">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <div class="card-header">
+            <h3 class="card-title">Product Vs Quantity Ordered</h3>
+          </div>
+          <div class="card-body">
+            <img src="{% static 'image/plot4.png' %}" width="100%" height="auto">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3">
+          <div class="card-header">
+            <h3 class="card-title">Product Name Vs Quantity Ordered & Price ($)</h3>
+          </div>
+          <div class="card-body">
+            <img src="{% static 'image/plot5.png' %}" width="100%" height="auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -2,12 +2,12 @@
 
 {% block content %}
     <div class="container my-5">
-        <h2 class="text-center mb-4">Prediction Result</h2>
+        <h2 class="text-center text-light mb-4">Prediction Result</h2>
         <div class="row">
             <div class="col-md-6">
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped text-light">
                     <thead class="table-success">
-                        <tr>
+                        <tr class="text-center text-dark">
                             <th>Input</th>
                             <th>Value</th>
                         </tr>
@@ -41,7 +41,7 @@
                 </table>
             </div>
             <div class="col-md-6">
-                <div class="card border-dark bg-dark">
+                <div class="card border-light bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-light">Prediction</h5>
                         <p class="card-text text-success">{{ prediction }}</p>

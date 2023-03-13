@@ -23,7 +23,7 @@
   {% block head %}{% endblock %}
 </head>
 
-<body>
+<body class="bg-dark">
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-warning">
     <div class="container">
@@ -37,7 +37,13 @@
             <a class="nav-link text-dark" href="{% url 'visual' %}">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="{% url 'predict' %}">Prediction Form</a>
+            <a class="nav-link text-dark" href="{% url 'predict' %}">Prediction_Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="{% url 'plot' %}">Data_Visualization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="{% url 'model' %}">Decision_Tree_Model_View</a>
           </li>
         </ul>
       </div>

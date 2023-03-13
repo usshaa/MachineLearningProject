@@ -65,7 +65,7 @@ def analyze(request):
     plt.xlabel('Month Number')
     plt.ylabel('Sales in millions USD')
     plt.show()
-    plt.savefig('static/image/plot1.png',dpi=300)
+    # plt.savefig('static/image/plot1.png',dpi=300)
 
     # Creation of new column as City
     new_df['City'] = new_df['Purchase Address'].apply(lambda x: x.split(',')[1] + ' ' + x.split(',')[2].split(' ')[1])
@@ -84,7 +84,7 @@ def analyze(request):
     plt.xlabel('City Name')
     plt.ylabel('Sales in millions USD')
     plt.show()
-    plt.savefig('static/image/plot2.jpg',dpi=300)
+    # plt.savefig('static/image/plot2.jpg',dpi=300)
 
     # Type casting Order_Date_Type to_datetime
 
@@ -107,7 +107,7 @@ def analyze(request):
     plt.ylabel('Number of Orders')
     plt.grid()
     plt.show()
-    plt.savefig('static/image/plot3.jpg',dpi=300)
+    # plt.savefig('static/image/plot3.jpg',dpi=300)
 
     # Checking duplicated Order ID
     all_df = new_df[new_df['Order ID'].duplicated(keep=False)]
@@ -140,7 +140,7 @@ def analyze(request):
     plt.xlabel('Product')
     plt.ylabel('Quantity Ordered')
     plt.show()
-    plt.savefig('static/image/plot4.jpg',dpi=300)
+    # plt.savefig('static/image/plot4.jpg',dpi=300)
 
     # Plotting Product of Quantity ordered and Price
     prices = new_df.groupby('Product').mean()['Price Each']
@@ -157,11 +157,14 @@ def analyze(request):
     ax1.set_xticklabels(products, rotation='vertical', size=8)
 
     plt.show()
-    plt.savefig('static/image/plot5.jpg',dpi=300)
+    # plt.savefig('static/image/plot5.jpg',dpi=300)
 
     # storing tranformed data for modeling
 
     new_df.to_csv('analyseddata.csv', index=False)
+
+def plot(request):
+    return render(request, 'plot.html')
 
 def visual(request):
     return render(request, 'visual.html')
