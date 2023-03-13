@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'mlapp',
     'bootstrap4',
     'dataanalyze',
+    'api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
