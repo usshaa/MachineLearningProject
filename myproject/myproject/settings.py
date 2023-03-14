@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mlapp',
-    'bootstrap4',
     'dataanalyze',
     'api',
     'rest_framework',
+    'twitter_bootstrap',
 ]
 
 MIDDLEWARE = [

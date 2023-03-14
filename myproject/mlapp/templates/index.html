@@ -5,7 +5,7 @@
   <h2 class="mt-5 mb-3 text-center animate__animated animate__fadeInDown">Prediction Form</h2>
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <form method="post" class="border p-4 rounded bg-success">
+      <form method="post" class="border p-4 rounded">
         {% csrf_token %}
         <div class="form-group row">
           <div class="col-sm-6">
@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="form-group text-center">
-          <button type="submit" class="btn btn-dark mt-3">Predict Sales</button>
+          <button type="submit" class="btn btn-primary mt-3">Predict Sales</button>
         </div>
       </form>
     </div>
