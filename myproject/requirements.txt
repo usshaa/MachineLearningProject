@@ -11,10 +11,10 @@ colour==0.1.5
 contourpy==1.0.7
 cycler==0.11.0
 Django==4.1.7
-django-bootstrap==0.2.4
 django-bootstrap4==22.3
-django-twitter-bootstrap==3.3.0
+django-crispy-forms==1.14.0
 djangorestframework==3.14.0
+dtreeviz==2.2.0
 exceptiongroup==1.1.1
 flatbuffers==23.3.3
 fonttools==4.39.0
@@ -22,12 +22,14 @@ gast==0.4.0
 google-auth==2.16.2
 google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
+graphviz==0.20.1
 grpcio==1.51.3
 gunicorn==20.1.0
 h5py==3.8.0
 idna==3.4
 iniconfig==2.0.0
 joblib==1.2.0
+keras==2.11.0
 kiwisolver==1.4.4
 libclang==15.0.6.1
 Markdown==3.4.1
@@ -57,6 +59,13 @@ six==1.16.0
 sklearn==0.0.post1
 soupsieve==2.4
 sqlparse==0.4.3
+tensorboard==2.11.2
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorflow==2.11.0
+tensorflow-estimator==2.11.0
+tensorflow-intel==2.11.0
+tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.2.0
 threadpoolctl==3.1.0
 tomli==2.0.1
@@ -65,3 +74,4 @@ tzdata==2022.7
 urllib3==1.26.15
 Werkzeug==2.2.3
 wrapt==1.15.0
+xgboost==1.7.4
