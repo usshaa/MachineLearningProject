@@ -168,3 +168,21 @@ def plot(request):
 
 def visual(request):
     return render(request, 'visual.html')
+
+
+import csv
+from django.http import JsonResponse
+
+def csv_data(request):
+    with open('analyseddata.csv', 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        data = {'products': [], 'quantity_ordered': [], 'price_each': [], 'month': [], 'city': [], 'hour': [], 'sales': []}
+        for row in reader:
+            data['products'].append(row['Product'])
+            data['quantity_ordered'].append(int(row['Quantity Ordered']))
+            data['price_each'].append(float(row['Price Each']))
+            data['month'].append(row['Month'])
+            data['city'].append(row['City'])
+            data['hour'].append(int(row['Hour']))
+            data['sales'].append(float(row['Sales']))
+    return JsonResponse(data)

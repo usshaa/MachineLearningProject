@@ -1,8 +1,9 @@
 from rest_framework import serializers
-from .models import Prediction
 
-
-class PredictionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Prediction
-        fields = '__all__'
+class PredictionSerializer(serializers.Serializer):
+    product = serializers.CharField()
+    quantity = serializers.FloatField()
+    price = serializers.FloatField()
+    month = serializers.CharField()
+    city = serializers.CharField()
+    hour = serializers.IntegerField()

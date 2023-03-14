@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div id="chart"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        d3.json("{% url 'csv_data' %}", function(data) {
+            var products = data.products;
+            var quantity_ordered = data.quantity_ordered;
+            var price_each = data.price_each;
+            var month = data.month;
+            var city = data.city;
+            var hour = data.hour;
+            var sales = data.sales;
+
+            // Code to create a chart using D3.js
+        });
+    </script>
+    <script src="{% static 'quantityorderedbyhours.js' %}"></script>
+{% endblock %}
